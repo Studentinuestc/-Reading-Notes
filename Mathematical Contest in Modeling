@@ -1,0 +1,26 @@
+The Ultimate Brownie pan
+by  Saturn
+Summary
+        In order to find an ultimate shape of the pan to achieve the highest utility ratio of space without overcooking, two models are developed.
+        In the first part, the pan is preliminarily simplified into a 2-D figure. And to get an intermediate shape between rectangle and circle, curve chamfer is used, in which every corner of the initial rectangle is replaced by a quarter of circle with a certain radius. As the radius increases, the shape of pan change of time is illustrated based on heat conduction equation. To solve the equations, the finite volume element method(FVEM) is applied to get the numerical solution of the partial differential equation(PDE).
+    Furthermore, since a pan is three-dimensional, we develop our model into a 3-D one by the software—ANSYS. In both the cases, the same conclusion is drawn that the evenness reaches the maximum when circle and the minimum when square. And the heat distribution is quite similar in both the 2-D case and the 3-D case, which proves our simplification feasible and reasonable.
+  In the second part of optimization, the multi-objective programming is converted into a single-objective one with linear weighted method. Firstly, the utility ratio of space is defined to measure the number of pans is the oven and the variance of heat distribution to measure the evenness. Then, the two indexes are normalized to achieve the combination of objectives. In addition, a dynamic programming(DP) is applied to deal with the configuration of pans in the oven. Thus the optimal solution about the shape and the number of pans is to obtained once the weight p and the radio W/L is given. In particular, when two objects are of the same importance, the optimal radius is always around the half of the maximum radius.
+Introduction
+Defining the Problem
+    If you are a chocolate lover there is nothing better than a delicious, home made brownie with a glass of ice cold milk when your sweet tooth is making you crave chocolate. However, the baking pans in our mom’s kitchen are often rectangular, in which the brownies are often overcooked at the four corners. Meanwhile, if we choose a circular one to achieve even distribution of heat, the space in an oven will not be efficiently made use of.
+    In the case, it is necessary to find the best shape of pan to maximize both the utilization rate of the space in an oven and the even distribution of heat for heat for the pan. Before this task, the distribution of heat across the outer edge of pan should be illustrated. Thus, two tasks will be done in this paper.
+  Develop a model to show the distribution of heat across the outer edge of a pan for pans of different shapes-rectangular to circular and other shapes in between.
+  Develop a model that can be used to select the best type of pam(shape) under the following conditions:
+   1.Maximize number of pans that can fit in the oven;
+   2.Maximize even distribution of heat for the pan;
+   3.Optimize a combination of conditions (1) and (2) where two weights are assigned to them.
+Model Overview
+  At first, we use curve chamfer (Figure 2.1) to describe the intermediate shapes between rectangular and circle. When the radius r changes from 0 to maximum, the shape changes from square(Here we simplify the rectangle into a square, and we will discuss this treatment in the part of assumptions) to circle.
+   
+
+
+
+
+
+     Then, in order to solve the problems above, we build two models. The first model which is based on the heat conduction equation and solved by the means of finite volume element method(FVEM) can illustrate the distribution of the heat across the pan. The second model which is based on the linear weighted method and dynamic programming (DP) that deals with the optimization of rectangular parts nesting.
+     In the first model, the heat conduction equation is used respectively in a 2-D case and a 3-D case, and in both the cases the distribution of heat across the pan can be illustrated. In the second model, the multi-objective programming is converted into a single-objective weighted method. Thus we can get the best shape of the pan to optimize the utilization rate of the space in an oven and the distribution of heat across the pan.
